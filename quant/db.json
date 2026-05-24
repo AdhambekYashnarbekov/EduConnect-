@@ -1,0 +1,527 @@
+{
+  "users": [
+    {
+      "id": "usr_admin1",
+      "role": "admin",
+      "full_name": "Evelyn Carter",
+      "email": "admin@quant.edu",
+      "password_hash": "admin123",
+      "institution": "Quant Academic Global",
+      "created_at": "2026-01-10T00:00:00.000Z",
+      "status": "active"
+    },
+    {
+      "id": "usr_teach1",
+      "role": "teacher",
+      "full_name": "Dr. Sarah Mitchell",
+      "email": "teacher@quant.edu",
+      "password_hash": "teacher123",
+      "institution": "Stanford University",
+      "department": "Computer Science",
+      "created_at": "2026-02-14T00:00:00.000Z",
+      "status": "active"
+    },
+    {
+      "id": "usr_teach2",
+      "role": "teacher",
+      "full_name": "Prof. Arthur Jones",
+      "email": "prof.jones@quant.edu",
+      "password_hash": "physics123",
+      "institution": "MIT",
+      "department": "Astrophysics",
+      "created_at": "2026-03-01T00:00:00.000Z",
+      "status": "active"
+    },
+    {
+      "id": "usr_stud1",
+      "role": "student",
+      "full_name": "Alex Mercer",
+      "email": "student1@quant.edu",
+      "password_hash": "student123",
+      "institution": "Stanford University",
+      "student_id": "STU-2026-001",
+      "created_at": "2026-03-15T00:00:00.000Z",
+      "status": "active"
+    },
+    {
+      "id": "usr_stud2",
+      "role": "student",
+      "full_name": "Emma Watson",
+      "email": "student2@quant.edu",
+      "password_hash": "student123",
+      "institution": "Stanford University",
+      "student_id": "STU-2026-002",
+      "created_at": "2026-03-16T00:00:00.000Z",
+      "status": "active"
+    },
+    {
+      "id": "usr_stud3",
+      "role": "student",
+      "full_name": "Bruce Banner",
+      "email": "bruce@quant.edu",
+      "password_hash": "hulk123",
+      "institution": "MIT",
+      "student_id": "STU-2026-003",
+      "created_at": "2026-03-20T00:00:00.000Z",
+      "status": "active"
+    },
+    {
+      "id": "usr_stud4",
+      "role": "student",
+      "full_name": "Tony Stark",
+      "email": "tony@quant.edu",
+      "password_hash": "ironman123",
+      "institution": "Stanford University",
+      "student_id": "STU-2026-004",
+      "created_at": "2026-04-01T00:00:00.000Z",
+      "status": "active"
+    }
+  ],
+  "test_rooms": [
+    {
+      "id": "room_calc",
+      "teacher_id": "usr_teach1",
+      "title": "Calculus III Midterm",
+      "subject": "Mathematics",
+      "password": "calc",
+      "time_limit": 45,
+      "approval_mode": "manual",
+      "status": "archived",
+      "created_at": "2026-05-10T10:00:00.000Z"
+    },
+    {
+      "id": "room_phys",
+      "teacher_id": "usr_teach2",
+      "title": "Quantum Physics Quiz 1",
+      "subject": "Physics",
+      "password": "quiz",
+      "time_limit": 30,
+      "approval_mode": "auto",
+      "status": "active",
+      "created_at": "2026-05-24T04:00:00.000Z"
+    },
+    {
+      "id": "room_web",
+      "teacher_id": "usr_teach1",
+      "title": "Full Stack Web Assembly",
+      "subject": "Computer Science",
+      "password": "web",
+      "time_limit": 60,
+      "approval_mode": "manual",
+      "status": "archived",
+      "created_at": "2026-05-24T04:30:00.000Z"
+    },
+    {
+      "id": "room_1779601450675",
+      "teacher_id": "usr_teach1",
+      "title": "Final Exam",
+      "subject": "Calculus 2",
+      "password": "124",
+      "time_limit": 30,
+      "approval_mode": "auto",
+      "status": "archived",
+      "created_at": "2026-05-24T05:44:10.675Z"
+    },
+    {
+      "id": "room_1779603815567",
+      "teacher_id": "usr_teach1",
+      "title": "Midterm1",
+      "subject": "Calculus ",
+      "password": "125",
+      "time_limit": 30,
+      "approval_mode": "auto",
+      "status": "archived",
+      "created_at": "2026-05-24T06:23:35.567Z"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q_calc_1",
+      "room_id": "room_calc",
+      "question_text": "What is the limit of (sin x) / x as x approaches 0?",
+      "option_a": "0",
+      "option_b": "1",
+      "option_c": "Infinity",
+      "option_d": "Undefined",
+      "correct_answer": "b",
+      "points": 10
+    },
+    {
+      "id": "q_calc_2",
+      "room_id": "room_calc",
+      "question_text": "Find the derivative of f(x) = ln(x^2 + 1).",
+      "option_a": "2x / (x^2 + 1)",
+      "option_b": "1 / (x^2 + 1)",
+      "option_c": "2 / (x^2 + 1)",
+      "option_d": "2xln(x^2 + 1)",
+      "correct_answer": "a",
+      "points": 10
+    },
+    {
+      "id": "q_calc_3",
+      "room_id": "room_calc",
+      "question_text": "Using the fundamental theorem of calculus, what is the integral from 0 to 2 of 3x^2 dx?",
+      "option_a": "6",
+      "option_b": "8",
+      "option_c": "12",
+      "option_d": "4",
+      "correct_answer": "b",
+      "points": 15
+    },
+    {
+      "id": "q_calc_4",
+      "room_id": "room_calc",
+      "question_text": "Which sequence diverges?",
+      "option_a": "a_n = 1/n",
+      "option_b": "a_n = ((-1)^n)/n",
+      "option_c": "a_n = ln(n)",
+      "option_d": "a_n = (3/4)^n",
+      "correct_answer": "c",
+      "points": 15
+    },
+    {
+      "id": "q_phys_1",
+      "room_id": "room_phys",
+      "question_text": "Which constant defines the scale of quantum physical phenomena?",
+      "option_a": "Boltzmann Constant",
+      "option_b": "Planck Constant",
+      "option_c": "Gravitational Constant",
+      "option_d": "Speed of Light",
+      "correct_answer": "b",
+      "points": 20
+    },
+    {
+      "id": "q_phys_2",
+      "room_id": "room_phys",
+      "question_text": "According to Heisenberg's Uncertainty Principle, we cannot simultaneously measure precisely what two parameters?",
+      "option_a": "Mass and Charge",
+      "option_b": "Position and Momentum",
+      "option_c": "Spin and Angular Velocity",
+      "option_d": "Time and Temperature",
+      "correct_answer": "b",
+      "points": 20
+    },
+    {
+      "id": "q_web_1",
+      "room_id": "room_web",
+      "question_text": "Which of the following describes WebAssembly (Wasm)?",
+      "option_a": "A style sheet language for responsive layouts.",
+      "option_b": "An interpreted database query language.",
+      "option_c": "A binary instruction format for a stack-based virtual machine.",
+      "option_d": "A web markup parser written in pure JavaScript.",
+      "correct_answer": "c",
+      "points": 25
+    },
+    {
+      "id": "q_web_2",
+      "room_id": "room_web",
+      "question_text": "How are environment variables accessed securely in a standard full-stack Express + Vite template?",
+      "option_a": "By writing them directly to index.html.",
+      "option_b": "By storing secrets in server-side process.env and proxying requests via server api routes.",
+      "option_c": "Exposing them client-side prefixed with PUBLIC_SECRET.",
+      "option_d": "Hardcoding credential keys in database tables directly.",
+      "correct_answer": "b",
+      "points": 25
+    },
+    {
+      "id": "q_ai_mock_1779601597862_1",
+      "room_id": "room_1779601450675",
+      "question_text": "AI Mock Question 1: Related to: [create 2 calc2 questions ]. Which principle best applies here?",
+      "option_a": "Option A is correct based on the primary theorem.",
+      "option_b": "Option B defines the secondary thermodynamic boundary.",
+      "option_c": "Option C is an erroneous mathematical artifact.",
+      "option_d": "Option D represents a standard control condition.",
+      "correct_answer": "a",
+      "points": 10
+    },
+    {
+      "id": "q_ai_mock_1779601597862_2",
+      "room_id": "room_1779601450675",
+      "question_text": "AI Mock Question 2: Related to: [create 2 calc2 questions ]. Which principle best applies here?",
+      "option_a": "Option A is correct based on the primary theorem.",
+      "option_b": "Option B defines the secondary thermodynamic boundary.",
+      "option_c": "Option C is an erroneous mathematical artifact.",
+      "option_d": "Option D represents a standard control condition.",
+      "correct_answer": "a",
+      "points": 10
+    },
+    {
+      "id": "q_ai_mock_1779601597862_3",
+      "room_id": "room_1779601450675",
+      "question_text": "AI Mock Question 3: Related to: [create 2 calc2 questions ]. Which principle best applies here?",
+      "option_a": "Option A is correct based on the primary theorem.",
+      "option_b": "Option B defines the secondary thermodynamic boundary.",
+      "option_c": "Option C is an erroneous mathematical artifact.",
+      "option_d": "Option D represents a standard control condition.",
+      "correct_answer": "a",
+      "points": 10
+    },
+    {
+      "id": "q_ai_mock_1779601597862_4",
+      "room_id": "room_1779601450675",
+      "question_text": "AI Mock Question 4: Related to: [create 2 calc2 questions ]. Which principle best applies here?",
+      "option_a": "Option A is correct based on the primary theorem.",
+      "option_b": "Option B defines the secondary thermodynamic boundary.",
+      "option_c": "Option C is an erroneous mathematical artifact.",
+      "option_d": "Option D represents a standard control condition.",
+      "correct_answer": "a",
+      "points": 10
+    },
+    {
+      "id": "q_ai_mock_1779601597862_5",
+      "room_id": "room_1779601450675",
+      "question_text": "AI Mock Question 5: Related to: [create 2 calc2 questions ]. Which principle best applies here?",
+      "option_a": "Option A is correct based on the primary theorem.",
+      "option_b": "Option B defines the secondary thermodynamic boundary.",
+      "option_c": "Option C is an erroneous mathematical artifact.",
+      "option_d": "Option D represents a standard control condition.",
+      "correct_answer": "a",
+      "points": 10
+    },
+    {
+      "id": "q_new_1779603824469_0",
+      "room_id": "room_1779603815567",
+      "question_text": "Salom",
+      "option_a": "A",
+      "option_b": "rwr",
+      "option_c": "rwre",
+      "option_d": "erwrr",
+      "correct_answer": "a",
+      "points": 10
+    },
+    {
+      "id": "q_new_1779603855618_1",
+      "room_id": "room_1779603815567",
+      "question_text": "Second",
+      "option_a": "A",
+      "option_b": "C",
+      "option_c": "B",
+      "option_d": "D",
+      "correct_answer": "a",
+      "points": 10
+    }
+  ],
+  "student_room_requests": [
+    {
+      "id": "req_1",
+      "student_id": "usr_stud1",
+      "student_name": "Alex Mercer",
+      "student_email": "student1@quant.edu",
+      "student_id_number": "STU-2026-001",
+      "room_id": "room_calc",
+      "status": "approved",
+      "requested_at": "2026-05-10T09:45:00.000Z"
+    },
+    {
+      "id": "req_2",
+      "student_id": "usr_stud2",
+      "student_name": "Emma Watson",
+      "student_email": "student2@quant.edu",
+      "student_id_number": "STU-2026-002",
+      "room_id": "room_calc",
+      "status": "approved",
+      "requested_at": "2026-05-10T09:50:00.000Z"
+    },
+    {
+      "id": "req_3",
+      "student_id": "usr_stud4",
+      "student_name": "Tony Stark",
+      "student_email": "tony@quant.edu",
+      "student_id_number": "STU-2026-004",
+      "room_id": "room_web",
+      "status": "pending",
+      "requested_at": "2026-05-24T04:45:00.000Z"
+    },
+    {
+      "id": "req_1779601637136",
+      "student_id": "usr_stud1",
+      "student_name": "Alex Mercer",
+      "student_email": "student1@quant.edu",
+      "student_id_number": "STU-2026-001",
+      "room_id": "room_1779601450675",
+      "status": "approved",
+      "requested_at": "2026-05-24T05:47:17.136Z"
+    },
+    {
+      "id": "req_1779604013023",
+      "student_id": "usr_stud1",
+      "student_name": "Alex Mercer",
+      "student_email": "student1@quant.edu",
+      "student_id_number": "STU-2026-001",
+      "room_id": "room_1779603815567",
+      "status": "approved",
+      "requested_at": "2026-05-24T06:26:53.023Z"
+    }
+  ],
+  "submissions": [
+    {
+      "id": "sub_calc_1",
+      "student_id": "usr_stud1",
+      "student_name": "Alex Mercer",
+      "student_email": "student1@quant.edu",
+      "student_id_number": "STU-2026-001",
+      "room_id": "room_calc",
+      "score": 40,
+      "percentage": 80,
+      "submitted_at": "2026-05-10T10:35:00.000Z",
+      "cheating_flags": 0,
+      "violation_timestamps": []
+    },
+    {
+      "id": "sub_calc_2",
+      "student_id": "usr_stud2",
+      "student_name": "Emma Watson",
+      "student_email": "student2@quant.edu",
+      "student_id_number": "STU-2026-002",
+      "room_id": "room_calc",
+      "score": 20,
+      "percentage": 40,
+      "submitted_at": "2026-05-10T10:44:00.000Z",
+      "cheating_flags": 2,
+      "violation_timestamps": [
+        "2026-05-10T10:15:00.000Z",
+        "2026-05-10T10:30:00.000Z"
+      ]
+    },
+    {
+      "id": "sub_1779601701993_v3455",
+      "student_id": "usr_stud1",
+      "student_name": "Alex Mercer",
+      "student_email": "student1@quant.edu",
+      "student_id_number": "STU-2026-001",
+      "room_id": "room_1779601450675",
+      "score": 0,
+      "percentage": 0,
+      "submitted_at": "2026-05-24T05:48:21.993Z",
+      "cheating_flags": 2,
+      "violation_timestamps": [
+        "2026-05-24T05:47:58.229Z",
+        "2026-05-24T05:47:59.019Z"
+      ]
+    },
+    {
+      "id": "sub_1779604043376_d4t3d",
+      "student_id": "usr_stud1",
+      "student_name": "Alex Mercer",
+      "student_email": "student1@quant.edu",
+      "student_id_number": "STU-2026-001",
+      "room_id": "room_1779603815567",
+      "score": 0,
+      "percentage": 0,
+      "submitted_at": "2026-05-24T06:27:23.376Z",
+      "cheating_flags": 3,
+      "violation_timestamps": [
+        "2026-05-24T06:27:07.013Z",
+        "2026-05-24T06:27:23.105Z",
+        "2026-05-24T06:27:23.365Z"
+      ]
+    }
+  ],
+  "answers": [
+    {
+      "id": "ans_1",
+      "submission_id": "sub_calc_1",
+      "question_id": "q_calc_1",
+      "selected_answer": "b",
+      "is_correct": true
+    },
+    {
+      "id": "ans_2",
+      "submission_id": "sub_calc_1",
+      "question_id": "q_calc_2",
+      "selected_answer": "a",
+      "is_correct": true
+    },
+    {
+      "id": "ans_3",
+      "submission_id": "sub_calc_1",
+      "question_id": "q_calc_3",
+      "selected_answer": "b",
+      "is_correct": true
+    },
+    {
+      "id": "ans_4",
+      "submission_id": "sub_calc_1",
+      "question_id": "q_calc_4",
+      "selected_answer": "a",
+      "is_correct": false
+    },
+    {
+      "id": "ans_5",
+      "submission_id": "sub_calc_2",
+      "question_id": "q_calc_1",
+      "selected_answer": "b",
+      "is_correct": true
+    },
+    {
+      "id": "ans_6",
+      "submission_id": "sub_calc_2",
+      "question_id": "q_calc_2",
+      "selected_answer": "b",
+      "is_correct": false
+    },
+    {
+      "id": "ans_7",
+      "submission_id": "sub_calc_2",
+      "question_id": "q_calc_3",
+      "selected_answer": "a",
+      "is_correct": false
+    },
+    {
+      "id": "ans_8",
+      "submission_id": "sub_calc_2",
+      "question_id": "q_calc_4",
+      "selected_answer": "b",
+      "is_correct": false
+    },
+    {
+      "id": "ans_1779601701993_c7nbw",
+      "submission_id": "sub_1779601701993_v3455",
+      "question_id": "q_ai_mock_1779601597862_1",
+      "selected_answer": "a",
+      "is_correct": false
+    },
+    {
+      "id": "ans_1779601701993_bkmlk",
+      "submission_id": "sub_1779601701993_v3455",
+      "question_id": "q_ai_mock_1779601597862_2",
+      "selected_answer": "a",
+      "is_correct": false
+    },
+    {
+      "id": "ans_1779601701993_kxjps",
+      "submission_id": "sub_1779601701993_v3455",
+      "question_id": "q_ai_mock_1779601597862_3",
+      "selected_answer": "a",
+      "is_correct": false
+    },
+    {
+      "id": "ans_1779601701993_8165a",
+      "submission_id": "sub_1779601701993_v3455",
+      "question_id": "q_ai_mock_1779601597862_4",
+      "selected_answer": "a",
+      "is_correct": false
+    },
+    {
+      "id": "ans_1779601701993_ozxco",
+      "submission_id": "sub_1779601701993_v3455",
+      "question_id": "q_ai_mock_1779601597862_5",
+      "selected_answer": "a",
+      "is_correct": false
+    },
+    {
+      "id": "ans_1779604043376_z2e8y",
+      "submission_id": "sub_1779604043376_d4t3d",
+      "question_id": "q_new_1779603824469_0",
+      "selected_answer": "a",
+      "is_correct": false
+    },
+    {
+      "id": "ans_1779604043376_qy6yz",
+      "submission_id": "sub_1779604043376_d4t3d",
+      "question_id": "q_new_1779603855618_1",
+      "selected_answer": "a",
+      "is_correct": false
+    }
+  ]
+}

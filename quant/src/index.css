@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-display: "Space Grotesk", sans-serif;
+}
+
+/* Custom fade effects and utility styles */
+@keyframes pulseGlow {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.glow-glow {
+  text-shadow: 0 0 10px rgba(14, 165, 233, 0.4);
+}
+
+.card-grad {
+  background: linear-gradient(135deg, #0a0f1d 0%, #050810 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #1d4ed8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Starry space bento elements & body background override */
+body {
+  background-color: #050810 !important;
+  color: #f1f5f9 !important;
+  background-image:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(37, 99, 235, 0.18) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 10% 30%,
+      rgba(56, 189, 248, 0.05) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 95% 70%,
+      rgba(139, 92, 246, 0.05) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(16, 185, 129, 0.05) 0%,
+      transparent 40%
+    );
+  background-attachment: fixed;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* Advanced responsive layout containers decoration */
+.bg-slate-950 {
+  background-color: #050810 !important;
+}
+
+/* Immersive neon glass card effects */
+.bg-slate-900,
+[id^="student_portal_container"] .bg-slate-900,
+[id^="teacher_portal_container"] .bg-slate-900,
+[id^="admin_portal_container"] .bg-slate-900 {
+  background-color: rgba(10, 15, 29, 0.6) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow:
+    0 20px 40px -15px rgba(0, 0, 0, 0.7),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Card highlight triggers */
+.bg-slate-900:hover,
+[id^="student_portal_container"] .bg-slate-900:hover,
+[id^="teacher_portal_container"] .bg-slate-900:hover {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.8),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Translucent container partitions */
+.bg-slate-950,
+[id^="student_portal_container"] .bg-slate-950,
+[id^="teacher_portal_container"] .bg-slate-950 {
+  background-color: rgba(5, 8, 16, 0.75) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Header/Navbar decoration */
+nav.bg-slate-900 {
+  background-color: rgba(10, 15, 29, 0.4) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Standard Inputs & Select Elements Glassmorphism */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select,
+textarea {
+  background-color: rgba(5, 8, 16, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #f8fafc !important;
+  border-radius: 0.75rem !important; /* 12px */
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  border-color: rgba(59, 130, 246, 0.6) !important;
+  box-shadow:
+    0 0 18px rgba(59, 130, 246, 0.35),
+    inset 0 0 10px rgba(59, 130, 246, 0.05) !important;
+  outline: none !important;
+}
+
+/* Immersive Interactive Button states */
+.bg-sky-600,
+.bg-blue-600 {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 4px 18px rgba(37, 99, 235, 0.45) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.bg-sky-600:hover,
+.bg-blue-600:hover {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+  box-shadow: 0 6px 24px rgba(59, 130, 246, 0.6) !important;
+  transform: translateY(-1px);
+}
+
+.bg-sky-600:active,
+.bg-blue-600:active {
+  transform: translateY(1px);
+}
+
+.bg-emerald-600 {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 4px 18px rgba(16, 185, 129, 0.4) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.bg-emerald-650,
+.bg-emerald-600:hover {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+  box-shadow: 0 6px 24px rgba(16, 185, 129, 0.55) !important;
+  transform: translateY(-1px);
+}
+
+/* Accent selected indicator borders */
+.border-sky-500,
+.border-blue-500 {
+  border-color: #3b82f6 !important;
+  box-shadow:
+    0 0 15px rgba(59, 130, 246, 0.35),
+    inset 0 0 10px rgba(59, 130, 246, 0.15) !important;
+}
+
+/* Custom Scrollbar for extreme immersion */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050810;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Starry Actor simulation bar optimization */
+#actor_switcher_bar {
+  background-color: rgba(5, 8, 16, 0.9) !important;
+  border-bottom: 2px solid rgba(59, 130, 246, 0.25) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+
+/* Smooth fade-in animation rules for portals */
+.animate-fade-in {
+  animation: fadeInEffect 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInEffect {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Beautiful Markdown styles */
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.markdown-body h1 {
+  font-size: 1.35rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.35rem;
+  color: #60a5fa;
+}
+.markdown-body h2 {
+  font-size: 1.15rem;
+  color: #93c5fd;
+  border-left: 2px solid #3b82f6;
+  padding-left: 0.5rem;
+  margin-top: 1rem;
+}
+.markdown-body h3 {
+  font-size: 1rem;
+  color: #e2e8f0;
+}
+.markdown-body p {
+  margin-bottom: 0.75rem;
+  line-height: 1.625;
+  color: #cbd5e1;
+}
+.markdown-body ul,
+.markdown-body ol {
+  margin-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  list-style-type: disc;
+}
+.markdown-body li {
+  margin-bottom: 0.35rem;
+  color: #cbd5e1;
+}
+.markdown-body strong {
+  color: #60a5fa;
+  font-weight: 600;
+}
+.markdown-body hr {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 1.25rem 0;
+}
